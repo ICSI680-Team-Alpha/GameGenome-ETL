@@ -1,9 +1,6 @@
 import pandas as pd
-import numpy as np
-import os
 import json
 import pymongo
-from pymongo import MongoClient
 from connect_db import connect_to_mongodb
 
 
