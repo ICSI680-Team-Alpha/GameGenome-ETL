@@ -68,15 +68,3 @@ def transform_steam_data(df):
     }, inplace=True)
 
     return df
-
-
-#     steam_tag_data.csv -> appid, tags()
-# # Create the new column D as a dictionary containing values from A, B, and C
-#     columns_to_merge = [col for col in df.columns if col != "appid"]
-#     new_column_name = 'D'
-
-#     # Create the new nested column
-#     df["tags"] = df.apply(
-#         lambda row: {col: row[col] for col in columns_to_merge}, 
-#         axis=1
-#     )
