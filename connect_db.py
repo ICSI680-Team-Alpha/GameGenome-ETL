@@ -9,7 +9,10 @@ def connect_to_mongodb(db_connection_string, db_name):
     :return: MongoClient instance and database object
     """
     print("Connecting to MongoDB...")
-    client = MongoClient(db_connection_string)
+    client = MongoClient(db_connection_string, 
+                        connectTimeoutMS=30000,  # Increase from 20000 to 30000
+                        socketTimeoutMS=45000,   # Add socket timeout
+                        serverSelectionTimeoutMS=30000)  # Add server selection timeout
     db = client[db_name]
     print("Connected to MongoDB successfully.")
     return client, db
